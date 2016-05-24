@@ -1,0 +1,10 @@
+[Unit]
+Description="Replace MPD Musid Directory"
+Before=mpd.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/replace-mpd-musicdir.sh
+
+[Install]
+WantedBy=multi-user.target
